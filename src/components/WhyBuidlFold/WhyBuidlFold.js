@@ -30,7 +30,9 @@ const WhyBuidlFold = () => {
 
   return (
     <div className="">
-      <div className="uppercase text-center font-Brinnan">Why Build Crew</div>
+      <div className="uppercase text-center font-Brinnan mb-2 text-2xl">
+        Why Build Crew
+      </div>
       <div className="text-center font-Brinnan">
         The BUIDL Crew is a dedicated space for developers that offers a wide
         range of opportunities for developers to learn, grow, and build.{" "}
@@ -47,7 +49,7 @@ const WhyBuidlFold = () => {
               key={id}
               className="text-sm text-white/80 bg-white/5 mb-4 py-2 px-2 rounded-sm border-[1px] border-white/10 hover:border-primary-1"
             >
-              😍 {content}
+              🔥 {content}
             </div>
           ))}
         </div>

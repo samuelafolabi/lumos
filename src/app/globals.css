@@ -4,7 +4,23 @@
 
 @font-face {
   font-family: "Brinnan";
-  src: url("../asset/brinnanFont/Brinnan\ Regular.otf");
+  src: url("../asset/brinnanFont/Brinnan\ Light.otf") format("opentype");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Brinnan";
+  src: url("../asset/brinnanFont/Brinnan\ Regular.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Brinnan";
+  src: url("../asset/brinnanFont/Brinnan\ Bold.otf") format("opentype");
+  font-weight: 600;
+  font-style: normal;
 }
 
 :root {
