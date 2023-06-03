@@ -37,7 +37,7 @@ const ContestAndEventsFold = () => {
       <div className="uppercase text-center font-Brinnan mb-2 text-2xl">
         Contests And Events
       </div>
-      <div className="text-center font-Brinnan ">
+      <div className="text-center font-Brinnan">
         Take on exciting challenges to win a variety of prizes, and get access
         to closed-door meetups.
         <br /> These are exclusively crafted to support your developer journey

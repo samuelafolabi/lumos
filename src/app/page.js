@@ -6,6 +6,7 @@ import Image from "next/image";
 import WhyBuidlFold from "@/components/WhyBuidlFold/WhyBuidlFold";
 import HowToJoinFold from "@/components/HowtoJoinFold/HowToJoinFold";
 import ContestAndEventsFold from "@/components/ContestAndEventsFold/ContestAndEventsFold";
+import EventsFold from "@/components/EventsFold/EventsFold";
 
 export default function Home() {
   return (
@@ -16,6 +17,7 @@ export default function Home() {
         <WhyBuidlFold />
         <HowToJoinFold />
         <ContestAndEventsFold />
+        <EventsFold />
       </div>
     </main>
   );
