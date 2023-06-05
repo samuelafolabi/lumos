@@ -1,4 +1,6 @@
-import React, { useState } from "react";
+import React, { useState, useLayoutEffect } from "react";
+import { gsap } from "gsap";
+
 const ContestAndEventsFold = () => {
   const [isHover, setIsHover] = useState(false);
   const [hoveredCard, setHoveredCard] = useState(0);
@@ -32,9 +34,49 @@ const ContestAndEventsFold = () => {
       reward: "$1200",
     },
   ];
+
+  useLayoutEffect(() => {
+    const nodeList = document.querySelectorAll(".card");
+    const firstElement = nodeList[0];
+    const lastElement = nodeList[2];
+
+    let firstCard = gsap.from(firstElement, {
+      opacity: 0,
+      rotate: -30,
+      transformOrigin: "right bottom",
+      ease: "power1.out",
+      force3D: true,
+      scrollTrigger: {
+        trigger: ".card",
+        end: "top 30%",
+        scrub: 2,
+        invalidateOnRefresh: false,
+      },
+    });
+
+    let lastCard = gsap.from(lastElement, {
+      opacity: 0,
+      rotate: 30,
+      transformOrigin: "left bottom",
+      ease: "power1.out",
+      force3D: true,
+      scrollTrigger: {
+        trigger: ".card",
+        end: "top 30%",
+        scrub: 2,
+        invalidateOnRefresh: false,
+      },
+    });
+
+    return () => {
+      firstCard.kill();
+      lastCard.kill();
+    };
+  }, []);
+
   return (
     <div>
-      <div className="uppercase text-center font-Brinnan mb-2 text-2xl">
+      <div className="contest uppercase text-center font-Brinnan mb-2 text-2xl">
         Contests And Events
       </div>
       <div className="text-center font-Brinnan">
@@ -44,11 +86,11 @@ const ContestAndEventsFold = () => {
         in the Web3 space.
       </div>
 
-      <div className="mt-10 px-16 mb-2 flex justify-center gap-8 font-Brinnan">
+      <div className="mt-10 px-16 mb-2 flex justify-center gap-8 overflow-x-clip font-Brinnan">
         {contests.map(({ id, title, description, deadline, reward }) => (
           <div
             key={id}
-            className="bg-white/5 flex flex-col gap-3 px-4 py-6 border border-white/10 hover:border-primary-2 rounded-md"
+            className="card bg-white/5 flex flex-col gap-3 px-4 py-6 border backdrop-blur-md border-white/10 hover:border-primary-2 rounded-md"
           >
             <div className="text-center text-xl">{title}</div>
             <div className="text-center text-sm text-white/80">

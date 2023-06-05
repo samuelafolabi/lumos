@@ -13,8 +13,6 @@ import EventsFold from "@/components/EventsFold/EventsFold";
 import { gsap } from "gsap";
 
 export default function Home() {
-  const [mousePos, setMousePos] = useState({});
-
   useEffect(() => {
     gsap.set(".ball", { xPercent: -50, yPercent: -50 });
 
@@ -31,9 +29,6 @@ export default function Home() {
     });
   }, []);
 
-  // window.addEventListener("mousemove", (e) => {
-  //   console.log(e);
-  // });
   return (
     <>
       <div className="ball bg-primary-2 w-2 h-2 fixed top-0 left-0 rounded-[50%]"></div>
@@ -43,9 +38,6 @@ export default function Home() {
       <div className="ball bg-primary-2 w-2 h-2 fixed top-0 left-0 rounded-[50%]"></div>
       <div className="ball bg-primary-2 w-2 h-2 fixed top-0 left-0 rounded-[50%]"></div>
       <div className="ball bg-secondary-2 w-2 h-2 fixed top-0 left-0 rounded-[50%]"></div>
-      <div className="ball bg-secondary-1 w-2 h-2 fixed top-0 left-0 rounded-[50%]"></div>
-      <div className="ball bg-primary-2 w-2 h-2 fixed top-0 left-0 rounded-[50%]"></div>
-      <div className="ball bg-primary-2 w-2 h-2 fixed top-0 left-0 rounded-[50%]"></div>
       <div className="ball bg-primary-2 w-2 h-2 fixed top-0 left-0 rounded-[50%]"></div>
       <div className="ball bg-secondary-2 w-2 h-2 fixed top-0 left-0 rounded-[50%]"></div>
       <div className="ball bg-secondary-3 w-2 h-2 fixed top-0 left-0 rounded-[50%]"></div>
@@ -53,9 +45,7 @@ export default function Home() {
       <div className="ball bg-primary-2 w-2 h-2 fixed top-0 left-0 rounded-[50%]"></div>
       <div className="ball bg-primary-2 w-2 h-2 fixed top-0 left-0 rounded-[50%]"></div>
       <div className="ball bg-secondary-2 w-2 h-2 fixed top-0 left-0 rounded-[50%]"></div>
-      <div className="ball bg-secondary-1 w-2 h-2 fixed top-0 left-0 rounded-[50%]"></div>
-      <div className="ball bg-primary-2 w-2 h-2 fixed top-0 left-0 rounded-[50%]"></div>
-      <div className="ball bg-primary-2 w-2 h-2 fixed top-0 left-0 rounded-[50%]"></div>
+
       <main className="relative">
         <Nav />
         <div className="flex flex-col gap-48 mx-auto max-w-screen-2xl">

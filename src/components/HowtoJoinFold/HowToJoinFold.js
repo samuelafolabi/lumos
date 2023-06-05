@@ -6,16 +6,15 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 
 const HowToJoinFold = () => {
-  const scroller = useRef();
   useLayoutEffect(() => {
-    let from = gsap.from(".whys", {
+    let from = gsap.from(".hows", {
       yPercent: () => -120,
       opacity: 0,
       stagger: 0.2,
       ease: "power1.out",
       force3D: true,
       scrollTrigger: {
-        trigger: ".whys",
+        trigger: ".hows",
         start: "top 90%",
         end: "top 20%",
         scrub: 2,
@@ -71,7 +70,7 @@ const HowToJoinFold = () => {
           {steps.map(({ id, content }) => (
             <div
               key={id}
-              className="whys text-center text-base text-white/80 bg-white/5 mb-6 py-2 px-4 rounded-sm border-[1px] border-white/10 hover:border-primary-2 cursor-pointer"
+              className="hows text-center text-base text-white/80 bg-white/5 mb-6 py-2 px-4 rounded-sm border-[1px] border-white/10 hover:border-primary-2 cursor-pointer"
             >
               {content}
             </div>
