@@ -7,15 +7,18 @@ const EventsFold = () => {
         <div className="uppercase text-4xl mb-4 font-[500]">
           The future of web3
         </div>
-        <div className="w-1/2">
-          BUIDL Crew Landing Page Contest (Exclusive for NFT Holders). Prizes
-          will be awarded only after clear validation of the submission is done
-          and the full code repo is submitted.
+        <div className="flex ">
+          <div className="w-[50%]">
+            <div className=" mb-4">
+              BUIDL Crew Landing Page Contest (Exclusive for NFT Holders).
+              Prizes will be awarded only after clear validation of the
+              submission is done and the full code repo is submitted.
+            </div>
+            <div className="font-[500]">⌛ 25th of June, 2022 | 01:00 WAT</div>
+          </div>
+
+          <div>Speakers</div>
         </div>
-
-        <div>Date and Time</div>
-
-        <div>Speakers</div>
 
         <div className="mt-10">
           <button className="uppercase rounded-sm w-full bg-white/20 py-4 border border-white/30 hover:bg-transparent ">

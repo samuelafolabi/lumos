@@ -1,7 +1,9 @@
 const HeroFold = () => {
   return (
     <div className="mt-32   font-Brinnan">
-      <div className="text-center text-[10vw]">THE BUIDL CREW</div>
+      <div className="text-center text-[10vw] 2xl:text-[170px]">
+        THE BUIDL CREW
+      </div>
       <div className="text-center text-xl">
         The BUIDL Crew by Lumos Labs is an all-exclusive community for Lumos
         Metaverse NFT holders.
