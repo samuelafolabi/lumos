@@ -36,11 +36,22 @@ const WhyBuidlFold = () => {
         invalidateOnRefresh: false,
       },
     });
-
     return () => {
       from.kill();
     };
   }, []);
+
+  useLayoutEffect(() => {
+    let from = gsap.from(".memoji", {
+      xPercent: () => -10,
+      scale: 0.9,
+      opacity: 0.8,
+      ease: "back.out(10)",
+    });
+    return () => {
+      from.kill();
+    };
+  }, [isHover]);
 
   const activities = [
     {
@@ -96,7 +107,7 @@ const WhyBuidlFold = () => {
               <div key={id} className="flex items-center justify-center">
                 {isHover === id && (
                   <>
-                    <Image src={image} alt="" className=" memoji w-1/2" />
+                    <Image src={image} alt="" className="memoji w-1/2" />
                   </>
                 )}
               </div>
