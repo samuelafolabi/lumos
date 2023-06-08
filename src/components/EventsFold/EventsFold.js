@@ -1,23 +1,38 @@
 import React from "react";
+import Image from "next/image";
+
+import hero6 from "../../../public/images/hero6.png";
+import hero2 from "../../../public/images/hero2.png";
 
 const EventsFold = () => {
   return (
     <div className="font-Brinnan px-16 mb-10">
-      <div className="rounded-sm bg-gradient-to-r from-secondary-2 via-secondary-3 to-secondary-1 px-8 py-8">
+      <div className="rounded-sm bg-gradient-to-tl transition-all from-secondary-2 via-secondary-3 to-primary-2/80  px-8 py-8">
         <div className="uppercase text-4xl mb-4 font-[500]">
           The future of web3
         </div>
-        <div className="flex ">
-          <div className="w-[50%]">
+        <div className="flex gap-8 items-center ">
+          <div className="w-[45%]">
             <div className=" mb-4">
-              BUIDL Crew Landing Page Contest (Exclusive for NFT Holders).
+              BUIDL Crew Landing Page Contest Event(Exclusive for NFT Holders).
               Prizes will be awarded only after clear validation of the
               submission is done and the full code repo is submitted.
             </div>
             <div className="font-[500]">⌛ 25th of June, 2022 | 01:00 WAT</div>
           </div>
 
-          <div>Speakers</div>
+          <div className="flex items-center gap-3">
+            <div className="flex flex-col justify-center items-center bg-white/5 border backdrop-blur-lg  py-4  border-white/30">
+              <Image src={hero6} alt="" className="w-1/2 grayscale" />
+              <div className="text-sm mt-2">Sam Afolabi</div>
+              <div className="text-sm font-light">Frontend Developer</div>
+            </div>
+            <div className="flex flex-col justify-center items-center bg-white/5 border backdrop-blur-lg  py-4  border-white/30">
+              <Image src={hero2} alt="" className="w-1/2 grayscale" />
+              <div className="text-sm mt-2 ">Seyi Martins</div>
+              <div className="text-sm font-light">Blockchain Developer</div>
+            </div>
+          </div>
         </div>
 
         <div className="mt-10">

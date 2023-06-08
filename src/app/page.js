@@ -11,6 +11,7 @@ import ContestAndEventsFold from "@/components/ContestAndEventsFold/ContestAndEv
 import EventsFold from "@/components/EventsFold/EventsFold";
 
 import { gsap } from "gsap";
+import HallOfFameFold from "@/components/HallOfFameFold/HallOfFameFold";
 
 export default function Home() {
   useEffect(() => {
@@ -54,6 +55,7 @@ export default function Home() {
           <HowToJoinFold />
           <ContestAndEventsFold />
           <EventsFold />
+          <HallOfFameFold />
         </div>
       </main>
     </>
