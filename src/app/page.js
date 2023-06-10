@@ -20,32 +20,32 @@ export default function Home() {
     let targets = gsap.utils.toArray(".ball");
     window.addEventListener("mousemove", (e) => {
       gsap.to(targets, {
-        duration: 1,
+        duration: 0.5,
         x: e.clientX,
         y: e.clientY,
         ease: "power1.out",
         overwrite: "auto",
-        stagger: 0.1,
+        stagger: 0.02,
       });
     });
   }, []);
 
   return (
     <>
+      <div className="ball bg-primary-2 w-4 h-4 fixed top-0 left-0 rounded-[50%]"></div>
+      <div className="ball bg-secondary-2 w-4 h-4 fixed top-0 left-0 rounded-[50%]"></div>
+      <div className="ball bg-secondary-3 w-3 h-3 fixed top-0 left-0 rounded-[50%]"></div>
+      <div className="ball bg-primary-2 w-3 h-3 fixed top-0 left-0 rounded-[50%]"></div>
+      <div className="ball bg-primary-2 w-3 h-3 fixed top-0 left-0 rounded-[50%]"></div>
       <div className="ball bg-primary-2 w-2 h-2 fixed top-0 left-0 rounded-[50%]"></div>
       <div className="ball bg-secondary-2 w-2 h-2 fixed top-0 left-0 rounded-[50%]"></div>
-      <div className="ball bg-secondary-3 w-2 h-2 fixed top-0 left-0 rounded-[50%]"></div>
       <div className="ball bg-primary-2 w-2 h-2 fixed top-0 left-0 rounded-[50%]"></div>
-      <div className="ball bg-primary-2 w-2 h-2 fixed top-0 left-0 rounded-[50%]"></div>
-      <div className="ball bg-primary-2 w-2 h-2 fixed top-0 left-0 rounded-[50%]"></div>
-      <div className="ball bg-secondary-2 w-2 h-2 fixed top-0 left-0 rounded-[50%]"></div>
-      <div className="ball bg-primary-2 w-2 h-2 fixed top-0 left-0 rounded-[50%]"></div>
-      <div className="ball bg-secondary-2 w-2 h-2 fixed top-0 left-0 rounded-[50%]"></div>
-      <div className="ball bg-secondary-3 w-2 h-2 fixed top-0 left-0 rounded-[50%]"></div>
-      <div className="ball bg-primary-2 w-2 h-2 fixed top-0 left-0 rounded-[50%]"></div>
-      <div className="ball bg-primary-2 w-2 h-2 fixed top-0 left-0 rounded-[50%]"></div>
-      <div className="ball bg-primary-2 w-2 h-2 fixed top-0 left-0 rounded-[50%]"></div>
-      <div className="ball bg-secondary-2 w-2 h-2 fixed top-0 left-0 rounded-[50%]"></div>
+      <div className="ball bg-secondary-2 w-1 h-1 fixed top-0 left-0 rounded-[50%]"></div>
+      <div className="ball bg-secondary-3 w-1 h-1 fixed top-0 left-0 rounded-[50%]"></div>
+      <div className="ball bg-primary-2 w-1 h-1 fixed top-0 left-0 rounded-[50%]"></div>
+      <div className="ball bg-primary-2 w-1 h-1 fixed top-0 left-0 rounded-[50%]"></div>
+      <div className="ball bg-primary-2 w-1 h-1 fixed top-0 left-0 rounded-[50%]"></div>
+      <div className="ball bg-secondary-2 w-1 h-1 fixed top-0 left-0 rounded-[50%]"></div>
 
       <main className="relative">
         <Nav />
