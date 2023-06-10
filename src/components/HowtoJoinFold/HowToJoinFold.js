@@ -62,7 +62,7 @@ const HowToJoinFold = () => {
         HOW TO JOIN
       </div>
 
-      <div className="text-center font-Brinnan ">
+      <div className="font-light md:font-normal text-sm md:text-base px-2 text-center font-Brinnan ">
         Simply follow the steps below to join lumos metaverse crew
       </div>
       <div className=" flex justify-center mt-10">

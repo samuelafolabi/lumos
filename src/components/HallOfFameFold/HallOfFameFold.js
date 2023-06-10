@@ -46,15 +46,18 @@ const HallOfFameFold = () => {
       <div className="contest uppercase text-center font-Brinnan mb-2 text-2xl">
         BUIDL Crew Hall of Fame
       </div>
-      <div className="text-center font-Brinnan">
+      <div className="text-center font-Brinnan font-light md:font-normal text-sm px-2">
         Ever heard of ‘unsung heroes?'. You probably won’t at the BUIDL Crew
         <br />
         Take a look at exceptional developers who are BUIDLing awesome Web3
         applications.
       </div>
-      <div className="mt-20 flex gap-4 items-center font-Brinnan  overflow-x-scroll">
+      <div className="mt-14 lg:mt-20 flex gap-2 md:gap-4 items-center font-Brinnan  overflow-x-scroll">
         {heroes.map((hero) => (
-          <div key={hero.name} className="text-center min-w-[30%]  px-4 py-8">
+          <div
+            key={hero.name}
+            className="text-center min-w-[45%] md:min-w-[30%] px-4 py-8"
+          >
             <Image src={hero.image} alt="" className="mx-auto w-1/2 mb-4 " />
             <div className="uppercase"> {hero.name}</div>
             <div className="font-light text-sm"> {hero.skill_level}</div>

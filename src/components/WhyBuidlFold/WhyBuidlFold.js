@@ -91,16 +91,19 @@ const WhyBuidlFold = () => {
       <div className="uppercase text-center font-Brinnan mb-2 text-2xl">
         Why Build Crew
       </div>
-      <div className="text-center font-Brinnan">
-        The BUIDL Crew is a dedicated space for developers that offers a wide
-        range of opportunities for developers to learn, grow, and build.{" "}
+      <div className="text-center font-light md:font-normal text-sm md:text-base font-Brinnan px-4 ">
+        <div className="mb-1">
+          The BUIDL Crew is a dedicated space for developers that offers a wide
+          range of opportunities for developers to learn, grow, and build.{" "}
+        </div>
+        <div>
+          Here are just a few of the fun-filled activities that are in store for
+          you!
+        </div>
       </div>
-      <div className="text-center font-Brinnan">
-        Here are just a few of the fun-filled activities that are in store for
-        you!
-      </div>
+
       <div className="flex justify-center gap-8 items-center mt-16">
-        <div className="w-[40%] font-Brinnan text-9xl text-center">
+        <div className="w-[40%] hidden md:block font-Brinnan text-9xl text-center">
           <div>
             {/* <Image src={happy} alt="" className="" />  */}
             {activities.map(({ id, image }) => (
@@ -118,7 +121,7 @@ const WhyBuidlFold = () => {
           {activities.map(({ id, content }) => (
             <div
               key={id}
-              className="whys text-sm text-white/80 bg-white/5 mb-4 py-2 px-2 rounded-sm border-[1px] border-white/10 hover:border-primary-2 cursor-pointer"
+              className="text-center md:text-left whys text-sm text-white/80 bg-white/5 mb-4 py-2 px-2 rounded-sm border-[1px] border-white/10 hover:border-primary-2 cursor-pointer"
               onMouseEnter={() => setIsHover(id)}
             >
               🔥 {content}

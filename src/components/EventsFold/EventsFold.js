@@ -6,13 +6,13 @@ import hero2 from "../../../public/images/hero2.png";
 
 const EventsFold = () => {
   return (
-    <div className="font-Brinnan px-16 mb-10">
+    <div className="font-Brinnan px-2 lg:px-16 mb-10">
       <div className="rounded-sm bg-gradient-to-tl transition-all from-secondary-2 via-secondary-3 to-primary-2/80  px-8 py-8">
         <div className="uppercase text-4xl mb-4 font-[500]">
           The future of web3
         </div>
-        <div className="flex gap-8 items-center ">
-          <div className="w-[45%]">
+        <div className="flex flex-col lg:flex-row gap-8 items-center ">
+          <div className="w-full lg:w-[45%]">
             <div className=" mb-4">
               BUIDL Crew Landing Page Contest Event(Exclusive for NFT Holders).
               Prizes will be awarded only after clear validation of the

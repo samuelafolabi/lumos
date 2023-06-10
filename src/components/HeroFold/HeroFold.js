@@ -3,16 +3,6 @@ import { gsap } from "gsap";
 
 const HeroFold = () => {
   useLayoutEffect(() => {
-    // gsap.from(".textElement", {
-    //   opacity: 0.1,
-    //   xPercent: -100,
-    //   stagger: 0.2,
-    //   ease: "power1.out",
-    //   duration: 2,
-    //   repeat: -1,
-    //   yoyo: true,
-    // });
-
     gsap.to(".textElement", {
       yPercent: () => -100,
       opacity: 0,
@@ -21,8 +11,7 @@ const HeroFold = () => {
       force3D: true,
       scrollTrigger: {
         trigger: ".textElement",
-        start: "top 150px ",
-
+        start: "top 140px",
         scrub: 2,
         markers: false,
         invalidateOnRefresh: false,
@@ -31,8 +20,8 @@ const HeroFold = () => {
   }, []);
 
   return (
-    <div className="mt-32   font-Brinnan">
-      <div className="text-center text-[10vw] 2xl:text-[170px]">
+    <div className="mt-36 font-Brinnan">
+      <div className="text-center text-[15vw] md:text-[10vw] 2xl:text-[170px]">
         <span className="textElement">T</span>
         <span className="textElement">H</span>
         <span className="textElement">E</span>{" "}
@@ -46,11 +35,11 @@ const HeroFold = () => {
         <span className="textElement">E</span>
         <span className="textElement">W</span>
       </div>
-      <div className=" text-center text-xl">
+      <div className="font-light md:font-normal  text-center text-sm md:text-xl">
         The BUIDL Crew by Lumos Labs is an all-exclusive community for Lumos
         Metaverse NFT holders.
       </div>
-      <div className="text-center mt-2 text-xl">
+      <div className="font-light md:font-normal text-center mt-2 text-sm  md:text-xl">
         Ready to reap the rewards of a true BUIDLer!
       </div>
 
