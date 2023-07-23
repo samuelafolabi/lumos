@@ -75,7 +75,7 @@ const ContestAndEventsFold = () => {
   }, []);
 
   return (
-    <div>
+    <div className="pt-44" id="contestandevents">
       <div className="contest uppercase text-center font-Brinnan mb-2 text-2xl">
         Contests And Events
       </div>
