@@ -21,7 +21,7 @@ const HeroFold = () => {
   }, []);
 
   return (
-    <div className="py-40 font-Brinnan">
+    <div className="py-24 font-Brinnan">
       <div className="text-center text-[15vw] md:text-[10vw] 2xl:text-[170px]">
         <span className="textElement">T</span>
         <span className="textElement">H</span>

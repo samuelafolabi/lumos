@@ -105,8 +105,8 @@ const WhyBuidlFold = () => {
       <div className="flex justify-center gap-8 items-center mt-16">
         <div className="w-[40%] hidden md:block font-Brinnan text-9xl text-center">
           <div>
-            {/* <Image src={happy} alt="" className="" />  */}
-            {activities.map(({ id, image }) => (
+            <Image src={activities[0].image} alt="" className="" />
+            {/* {activities.map(({ id, image }) => (
               <div key={id} className="flex items-center justify-center">
                 {isHover === id && (
                   <>
@@ -114,7 +114,7 @@ const WhyBuidlFold = () => {
                   </>
                 )}
               </div>
-            ))}
+            ))} */}
           </div>
         </div>
         <div className="font-light font-Brinnan">

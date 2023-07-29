@@ -1,4 +1,5 @@
 import React, { useRef, useLayoutEffect } from "react";
+
 import Image from "next/image";
 import heyy from "../../../public/images/heyy.png";
 
@@ -31,31 +32,64 @@ const HowToJoinFold = () => {
   const steps = [
     {
       id: 1,
-      content:
-        " Apply for the Lumos Metaverse whitelist and mint your Lumos Metaverse NFT",
+      content: "Star the repo",
     },
     {
       id: 2,
-      content: "Join the Lumos Labs Discord Server",
+      content: "Fork the repo",
     },
     {
       id: 3,
-      content: `Go to the #buidl-crew channel and click on the "Join BUIDL Crew" button`,
+      content: `Browse the Voting Platform on Polygon project and suggest Issues/Features that can added to the project.`,
     },
     {
       id: 4,
-      content: " Complete the BUIDL Crew application form",
+      content:
+        "Raise a PR to the main branch of Voting Platform on Polygon repo with changes and suggestions you feel can be added to this Dapp.",
     },
     {
       id: 5,
-      content: " Await to be reviewed by the BUIDL Crew team",
+      content:
+        "You can either make changes to the code to Voting Platform on Polygon or Add suggestions, Features or improvements in the Readme and raise a PR.",
     },
     {
       id: 6,
-      content:
-        "If you are accepted, you will be granted access to the BUIDL Crew community and all of the benefits that it offers.",
+      content: "Once the PR is done, please fill this form",
+    },
+    {
+      id: 6,
+      content: "pray for mainnet ETH to magically appear into your metamask",
     },
   ];
+
+  // const steps = [
+  //   {
+  //     id: 1,
+  //     content:
+  //       " Apply for the Lumos Metaverse whitelist and mint your Lumos Metaverse NFT",
+  //   },
+  //   {
+  //     id: 2,
+  //     content: "Join the Lumos Labs Discord Server",
+  //   },
+  //   {
+  //     id: 3,
+  //     content: `Go to the #buidl-crew channel and click on the "Join BUIDL Crew" button`,
+  //   },
+  //   {
+  //     id: 4,
+  //     content: " Complete the BUIDL Crew application form",
+  //   },
+  //   {
+  //     id: 5,
+  //     content: " Await to be reviewed by the BUIDL Crew team",
+  //   },
+  //   {
+  //     id: 6,
+  //     content:
+  //       "If you are accepted, you will be granted access to the BUIDL Crew community and all of the benefits that it offers.",
+  //   },
+  // ];
   return (
     <div className="overflow-hidden pt-44" id="howtojoin">
       <div className="uppercase text-center font-Brinnan mb-2 text-2xl">
