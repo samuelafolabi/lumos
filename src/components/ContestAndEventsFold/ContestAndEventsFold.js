@@ -1,6 +1,8 @@
 import React, { useState, useLayoutEffect } from "react";
 import { gsap } from "gsap";
 import Link from "next/link";
+import Image from "next/image";
+import hero1 from "../../../public/images/hero1.png";
 
 const ContestAndEventsFold = () => {
   const [isHover, setIsHover] = useState(false);
@@ -113,39 +115,61 @@ const ContestAndEventsFold = () => {
           ({ id, title, description, deadline, reward, status }) => (
             <div
               key={id}
-              className="card  w-full lg:w-[400px] bg-white/5 flex flex-col gap-3 px-4 py-6 border backdrop-blur-md border-white/10 hover:border-primary-2 rounded-md"
+              className="card flip-card h-fit  w-full lg:w-[400px]  border backdrop-blur-md border-white/10 hover:border-primary-2 rounded-md hover:"
             >
-              <div className="text-center text-xl">{title}</div>
-              <div className="flex justify-center">
-                <div
-                  className={`text-center px-4 py-2 border-[1px] ${
-                    status === "Upcoming"
-                      ? "border-blue-500/30 text-blue-500/90 bg-blue-500/20"
-                      : status === "Ongoing"
-                      ? "border-yellow-500/20 text-yellow-500/70  bg-yellow-500/10"
-                      : "border-green-500/20 text-green-500/70  bg-green-500/10"
-                  } w-fit font-light md:font-normal text-xs`}
-                >
-                  {status}
-                </div>
-              </div>
+              <div className="flip-card-inner bg-white/5 flex h-[400px] ">
+                {/*----------- card front ----- */}
+                <div class="flip-card-front flex flex-col gap-3 px-4 py-6">
+                  <div className="text-center text-xl">{title}</div>
+                  <div className="flex justify-center">
+                    <div
+                      className={`text-center px-4 py-2 border-[1px] ${
+                        status === "Upcoming"
+                          ? "border-blue-500/30 text-blue-500/90 bg-blue-500/20"
+                          : status === "Ongoing"
+                          ? "border-yellow-500/20 text-yellow-500/70  bg-yellow-500/10"
+                          : "border-green-500/20 text-green-500/70  bg-green-500/10"
+                      } w-fit font-light md:font-normal text-xs`}
+                    >
+                      {status}
+                    </div>
+                  </div>
 
-              <div className="text-center font-light md:font-normal text-sm text-white/80">
-                {description}
-              </div>
-              <div className="text-center  text-white/80">
-                Deadline: {deadline}
-              </div>
-              <hr />
-              <div className="text-center">
-                Reward:{" "}
-                <span
-                  className={
-                    isHover && hoveredCard == id ? "text-secondary-1 " : ""
-                  }
-                >
-                  {reward}
-                </span>{" "}
+                  <div className="text-center font-light md:font-normal text-sm text-white/80">
+                    {description}
+                  </div>
+                  <div className="text-center  text-white/80">
+                    Deadline: {deadline}
+                  </div>
+                  <hr />
+                  <div className="text-center">
+                    Reward:{" "}
+                    <span
+                      className={
+                        isHover && hoveredCard == id ? "text-secondary-1 " : ""
+                      }
+                    >
+                      {reward}
+                    </span>{" "}
+                  </div>
+                </div>
+                {/*----------- card front-------  */}
+                {/* ----------- card back ------------  */}
+
+                <div class="flip-card-back  bg-white/5 flex justify-center">
+                  <div className="text-center min-w-[45%] md:min-w-[30%] px-4 py-8">
+                    <div className="text-center text-xl mb-6">Winner</div>
+
+                    <Image src={hero1} alt="" className="mx-auto w-1/2 mb-4 " />
+                    <div className="uppercase"> Caleb John</div>
+
+                    <div className=" text-sm font-light text-white/80 mt-2 cursor-pointer">
+                      Linkedin | Twitter{" "}
+                    </div>
+                  </div>
+                </div>
+
+                {/* ----------- card back ------------  */}
               </div>
             </div>
           )
