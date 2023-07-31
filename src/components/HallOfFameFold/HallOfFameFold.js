@@ -6,39 +6,55 @@ import hero3 from "../../../public/images/hero3.png";
 import hero4 from "../../../public/images/hero4.png";
 import hero5 from "../../../public/images/hero5.png";
 import hero6 from "../../../public/images/hero6.png";
+import newHero1 from "../../../public/images/newHero1.jpg";
+import newHero2 from "../../../public/images/newHero2.jpg";
+import newHero3 from "../../../public/images/newHero3.jpg";
+
 import Image from "next/image";
 
 const HallOfFameFold = () => {
   const heroes = [
     {
-      image: hero1,
+      image: newHero1,
       name: "Caleb John",
       skill_level: "Beginner",
+      contribution:
+        "This developer helped in doing xyz in  atete ieiei. This developer helped in doing xyz in  atete ieiei days",
     },
     {
-      image: hero2,
+      image: newHero2,
       name: "Seyi Martins",
       skill_level: "Intermediate",
+      contribution:
+        "This developer helped in doing xyz in  atete ieiei. This developer helped in doing xyz in  atete ieiei days",
     },
     {
-      image: hero3,
+      image: newHero3,
       name: "Ayo Oghenero",
       skill_level: "Beginner",
+      contribution:
+        "This developer helped in doing xyz in  atete ieiei. This developer helped in doing xyz in  atete ieiei days",
     },
     {
-      image: hero4,
+      image: newHero1,
       name: "Bola Thompson",
       skill_level: "Beginner",
+      contribution:
+        "This developer helped in doing xyz in  atete ieiei. This developer helped in doing xyz in  atete ieiei days",
     },
     {
-      image: hero5,
+      image: newHero2,
       name: "Bala Blue",
       skill_level: "Professional",
+      contribution:
+        "This developer helped in doing xyz in  atete ieiei. This developer helped in doing xyz in  atete ieiei days",
     },
     {
-      image: hero6,
+      image: newHero3,
       name: "Big Boy",
       skill_level: "Beginner",
+      contribution:
+        "This developer helped in doing xyz in  atete ieiei. This developer helped in doing xyz in abc days",
     },
   ];
 
@@ -53,15 +69,27 @@ const HallOfFameFold = () => {
         Take a look at exceptional developers who are BUIDLing awesome Web3
         applications.
       </div>
-      <div className="mt-14 lg:mt-20 flex gap-2 md:gap-4 items-center font-Brinnan  overflow-x-scroll">
+      <div className="mt-14 lg:mt-20 flex gap-2 md:gap-4 items-center font-Brinnan  overflow-x-scroll no-scrollbar">
         {heroes.map((hero) => (
           <div
             key={hero.name}
-            className="text-center min-w-[45%] md:min-w-[30%] px-4 py-8"
+            className="text-center min-w-[45%] md:min-w-[28%] px-4 py-8"
           >
-            <Image src={hero.image} alt="" className="mx-auto w-1/2 mb-4 " />
+            <div className="h-40 w-40 flex rounded-full justify-center mx-auto mb-2 shadow-[inset_1px_-1px_100px_rgba(0,198,244,0.3)]  ">
+              <Image
+                src={hero.image}
+                alt=""
+                className="w-full h-full object-cover rounded-full grayscale hover:grayscale-0 z-[-2] "
+              />
+            </div>
             <div className="uppercase"> {hero.name}</div>
             <div className="font-light text-sm"> {hero.skill_level}</div>
+            <div className="flex justify-center mt-2">
+              <div className="font-light text-sm w-[75%] text-center">
+                {hero.contribution}
+              </div>
+            </div>
+
             <div className=" text-sm font-light text-white/80 mt-2 cursor-pointer">
               Linkedin | Twitter{" "}
             </div>

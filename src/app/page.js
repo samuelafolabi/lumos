@@ -12,6 +12,7 @@ import EventsFold from "@/components/EventsFold/EventsFold";
 
 import { gsap } from "gsap";
 import HallOfFameFold from "@/components/HallOfFameFold/HallOfFameFold";
+import Footer from "@/components/Footer/Footer";
 
 export default function Home() {
   useEffect(() => {
@@ -56,6 +57,7 @@ export default function Home() {
           <ContestAndEventsFold />
           <EventsFold />
           <HallOfFameFold />
+          <Footer />
         </div>
       </main>
     </>
