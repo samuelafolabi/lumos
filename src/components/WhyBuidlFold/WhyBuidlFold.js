@@ -87,7 +87,10 @@ const WhyBuidlFold = () => {
   ];
 
   return (
-    <div className="pt-44" id="whybuildlcrew">
+    <div className="pt-32  relative " id="whybuildlcrew">
+      <div className="absolute glow left-0 top-1/2"></div>
+      <div className="absolute glow-right right-0 top-1/2"></div>
+
       <div className="uppercase text-center font-Brinnan mb-2 text-2xl">
         Why Build Crew
       </div>

@@ -91,7 +91,7 @@ const HowToJoinFold = () => {
   //   },
   // ];
   return (
-    <div className="overflow-hidden pt-44" id="howtojoin">
+    <div className="overflow-hidden pt-32" id="howtojoin">
       <div className="uppercase text-center font-Brinnan mb-2 text-2xl">
         HOW TO JOIN
       </div>

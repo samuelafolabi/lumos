@@ -50,8 +50,9 @@ export default function Home() {
 
       <main className="relative">
         <Nav />
-        <div className="flex flex-col gap-48 mx-auto max-w-screen-2xl">
+        <div className="flex flex-col  mx-auto max-w-screen-2xl">
           <HeroFold />
+          {/* <div className=""></div> */}
           <WhyBuidlFold />
           <HowToJoinFold />
           <ContestAndEventsFold />
