@@ -19,7 +19,9 @@ const Footer = () => {
 
   const logoSize = "40px";
   return (
-    <div className="font-Brinnan" id="footer">
+    <div className="font-Brinnan relative" id="footer">
+      <div className="absolute glow left-0 top-10"></div>
+      <div className="absolute glow-right right-0 top-10"></div>
       <div className="uppercase text-center font-Brinnan text-2xl">
         Stay updated with our journey
       </div>

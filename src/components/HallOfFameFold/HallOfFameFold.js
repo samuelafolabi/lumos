@@ -59,7 +59,7 @@ const HallOfFameFold = () => {
   ];
 
   return (
-    <div className="pt-44" id="halloffame">
+    <div className="pt-44 relative" id="halloffame">
       <div className="contest uppercase text-center font-Brinnan mb-2 text-2xl">
         BUIDL Crew Hall of Fame
       </div>

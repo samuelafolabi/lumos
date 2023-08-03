@@ -56,8 +56,11 @@ export default function Home() {
           <WhyBuidlFold />
           <HowToJoinFold />
           <ContestAndEventsFold />
+          <div className="h-44"></div>
           <EventsFold />
+          <div className="h-40"></div>
           <HallOfFameFold />
+          <div className="h-48"></div>
           <Footer />
         </div>
       </main>
