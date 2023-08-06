@@ -12,7 +12,8 @@ import {
 
 const Footer = () => {
   const [email, setEmail] = useState("");
-  const handleSubmit = () => {
+  const handleSubmit = (e) => {
+    e.preventDefault();
     alert(`Submitted email: ${email}`);
   };
 
@@ -76,8 +77,8 @@ const Footer = () => {
       </div>
 
       {/* --------------------------  */}
-      <div className="flex justify-end pr-4 mt-28">
-        <div className="text-sm font-light">
+      <div className="flex justify-center mt-28">
+        <div className="text- font-light">
           Built for the crew by{" "}
           <Link
             href="https://www.linkedin.com/in/samuel-afolabi/"
