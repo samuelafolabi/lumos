@@ -12,12 +12,11 @@ import {
 
 const Footer = () => {
   const [email, setEmail] = useState("");
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    console.log("Submitted email:", email);
+  const handleSubmit = () => {
+    alert(`Submitted email: ${email}`);
   };
 
-  const logoSize = "40px";
+  const logoSize = "30px";
   return (
     <div className="font-Brinnan relative" id="footer">
       <div className="absolute glow left-0 top-10"></div>
@@ -27,27 +26,27 @@ const Footer = () => {
       </div>
       {/* --------------- links ---------------  */}
 
-      <div className="flex justify-center gap-10 mt-16">
+      <div className="flex justify-center gap-4 lg:gap-10 mt-16 flex-wrap items-center px-4">
         <Link href="https://www.facebook.com/LabsLumos" target="_blank">
-          <FaFacebook size={logoSize} />
+          <FaFacebook className="text-2xl lg:text-4xl" />
         </Link>
         <Link
           href="https://www.linkedin.com/company/lumoslabs/mycompany/"
           target="_blank"
         >
-          <FaLinkedin size={logoSize} />
+          <FaLinkedin className="text-2xl lg:text-4xl" />
         </Link>
         <Link href="https://discord.gg/WyfmzJpzZd" target="_blank">
-          <FaDiscord size={logoSize} />
+          <FaDiscord className="text-2xl lg:text-4xl" />
         </Link>
         <Link href="https://twitter.com/lumoslabsHQ" target="_blank">
-          <FaTwitter size={logoSize} />
+          <FaTwitter className="text-2xl lg:text-4xl" />
         </Link>
         <Link href="https://www.instagram.com/lumoslabshq/" target="_blank">
-          <FaInstagram size={logoSize} />
+          <FaInstagram className="text-2xl lg:text-4xl" />
         </Link>
         <Link href="https://medium.com/lumos-labs" target="_blank">
-          <FaMedium size={logoSize} />
+          <FaMedium className="text-2xl lg:text-4xl" />
         </Link>
       </div>
 
@@ -55,7 +54,7 @@ const Footer = () => {
 
       <div className="flex justify-center mt-10">
         <form onSubmit={handleSubmit}>
-          <div className="w-80">
+          <div className="w-[90vw] lg:w-80">
             <input
               required
               name="email"

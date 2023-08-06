@@ -73,7 +73,7 @@ const HallOfFameFold = () => {
         {heroes.map((hero) => (
           <div
             key={hero.name}
-            className="text-center min-w-[45%] md:min-w-[28%] px-4 py-8"
+            className="text-center min-w-[65%] md:min-w-[28%] px-4 py-8"
           >
             <div className="h-40 w-40 flex rounded-full justify-center mx-auto mb-2 shadow-[inset_1px_-1px_100px_rgba(0,198,244,0.3)]  ">
               <Image

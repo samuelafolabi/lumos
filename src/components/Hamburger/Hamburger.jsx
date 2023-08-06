@@ -14,7 +14,7 @@ const Hamburger = (props) => {
   //     return null;
   //   }
   return (
-    <div className="fixed bg-black left-0 top-0 w-[100vw] h-[100vh] z-10 py-10">
+    <div className="fixed bg-black left-0 top-0 w-[100vw] h-[100vh] h-[100dvh]  z-10 py-10">
       <div className="flex flex-col items-center gap-6 lg:gap-8 pr-4 text-white ">
         <a href="#whybuildlcrew" onClick={() => props.setIsOpen(false)}>
           Why Buidl Crew
