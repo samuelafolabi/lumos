@@ -57,7 +57,7 @@ const HowToJoinFold = () => {
       content: "Once the PR is done, please fill this form",
     },
     {
-      id: 6,
+      id: 7,
       content: "pray for mainnet ETH to magically appear into your metamask",
     },
   ];

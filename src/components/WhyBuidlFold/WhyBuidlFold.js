@@ -1,5 +1,5 @@
 import Image from "next/image";
-import React, { useState, useLayoutEffect, useRef } from "react";
+import React, { useState, useLayoutEffect, useEffect, useRef } from "react";
 
 import wink from "../../../public/images/wink.png";
 import star from "../../../public/images/star.png";
@@ -19,26 +19,41 @@ gsap.registerPlugin(ScrollTrigger);
 const WhyBuidlFold = () => {
   const [isHover, setIsHover] = useState(1);
 
-  useLayoutEffect(() => {
-    let from = gsap.from(".whys", {
-      yPercent: () => -120,
-      xPercent: () => -60,
-      opacity: 0,
-      stagger: 0.2,
-      ease: "power1.out",
-      force3D: true,
-      scrollTrigger: {
-        trigger: ".whys",
-        start: "top 100%",
-        end: "top 30%",
-        scrub: 2,
-        markers: false,
-        invalidateOnRefresh: false,
-      },
+  useEffect(() => {
+    const nodeList = document.querySelectorAll(".whys");
+    console.log(nodeList);
+
+    gsap.set(".whys", {
+      border: "1px solid transparent",
     });
-    return () => {
-      from.kill();
-    };
+
+    nodeList.forEach((element) => {
+      gsap.to(element, {
+        ease: "power1.out",
+        scrollTrigger: {
+          trigger: element,
+          start: "top 70%",
+          end: "top 65%",
+          scrub: 2,
+          ease: "power1.out",
+          force3D: true,
+          markers: true,
+          invalidateOnRefresh: false,
+          onEnter: () => {
+            gsap.to(element, {
+              borderColor: "#00C6F4",
+              scale: 1.1,
+            });
+          },
+          onLeave: () => {
+            gsap.to(element, {
+              borderColor: "transparent",
+              scale: 1.0,
+            });
+          },
+        },
+      });
+    });
   }, []);
 
   useLayoutEffect(() => {
@@ -124,7 +139,7 @@ const WhyBuidlFold = () => {
           {activities.map(({ id, content }) => (
             <div
               key={id}
-              className="text-center md:text-left whys text-sm text-white/80 bg-white/5 mb-4 py-2 px-2 rounded-sm border-[1px] border-white/10 hover:border-primary-2 cursor-pointer"
+              className="text-center md:text-left whys text-sm text-white/80 bg-white/5 mb-4 py-2 px-2 rounded-sm border-white/10  border-[1px] cursor-pointer"
               onMouseEnter={() => setIsHover(id)}
             >
               🔥 {content}
@@ -137,3 +152,8 @@ const WhyBuidlFold = () => {
 };
 
 export default WhyBuidlFold;
+// border-[1px]
+
+// border-white/10
+
+// hover:border-primary-2
