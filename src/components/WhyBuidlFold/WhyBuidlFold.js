@@ -29,15 +29,13 @@ const WhyBuidlFold = () => {
 
     nodeList.forEach((element) => {
       gsap.to(element, {
-        ease: "power1.out",
         scrollTrigger: {
           trigger: element,
           start: "top 70%",
           end: "top 65%",
           scrub: 2,
-          ease: "power1.out",
           force3D: true,
-          markers: true,
+          markers: false,
           invalidateOnRefresh: false,
           onEnter: () => {
             gsap.to(element, {
